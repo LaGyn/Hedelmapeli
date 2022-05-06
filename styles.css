@@ -1,0 +1,27 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(88, 8, 62);
+}
+
+.container {
+    width: 800px;
+    height:auto;
+    margin:auto;
+    background-color: rgb(25, 235, 35);
+    border:2px solid black;
+    border-radius: 15px;
+    align-content: center;
+}
+
+.content {
+    width: 770px;
+    height: 300px;
+    margin:auto;
+    background-color: bisque;
+    border: 2px solid rgb(186, 99, 59);
+    border-radius: 15px;
+    margin-bottom: 15px;
+}
