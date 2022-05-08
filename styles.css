@@ -18,10 +18,42 @@ body {
 
 .content {
     width: 770px;
-    height: 300px;
+    height: fit-content;
     margin:auto;
     background-color: bisque;
     border: 2px solid rgb(186, 99, 59);
     border-radius: 15px;
     margin-bottom: 15px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 24px;
+    color:rgb(29, 86, 15);
+}
+
+.content.left {
+    width: 200px;
+    float: left;
+    position: absolute;
+    top: 20px;
+    
+}
+
+h3 {
+    padding-left: 20px;
+}
+
+.content.right {
+    width: 500px;
+    position: absolute;
+    top:20px;
+    right:0;
+    float:right;
+    clear:right;
+    
+}
+
+table, td {
+    border: 2px solid rgb(29, 86, 15);
+    border-radius: 12px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 24px;
 }
