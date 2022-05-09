@@ -8,44 +8,65 @@
     <title>Hedelmäpeli</title>
 </head>
 <body>
-    <div class="container">
-        <canvas id="header" width="900" height="120" style="align-content: center;"></canvas>
-        <div class="content">
-            <h3>Rahaa: <span id="rahaa">50</span>€</h3>
-            <h3>Valitse panos: </h3>
-            <button id="yksi">1€ </button> <button id="kaksi"> 2€ </button> <button id="kolme"> 3€ </button> <button id="nelja"> 4€</button>
-            <h3 style="padding: 30px 30px">Panos: <span id="tulostusAlue"></span></h3>
-            <table style="position:relative; bottom: 340px; float:right; margin-right: 15px">
-                <tr>
-                    <td><img src="images/number.jpg" alt="Number seven" style="height: 40px"><img src="images/number.jpg" alt="Number seven" style="height: 40px"><img src="images/number.jpg" alt="Number seven" style="height: 40px"><img src="images/number.jpg" alt="Number seven" style="height: 40px"> = 10 x panos</td>
-                 </tr>
-                <tr>
-                    <td><img src="images/apple.png" alt="Apple" style="width: 40px"><img src="images/apple.png" alt="Apple" style="width: 40px"><img src="images/apple.png" alt="Apple" style="width: 40px"><img src="images/apple.png" alt="Apple" style="width: 40px"> = 6 x panos</td>
-                </tr>
-                <tr>
-                    <td><img src="images/watermelon.png" alt="Watermelon" style="width: 40px"><img src="images/watermelon.png" alt="Watermelon" style="width: 40px"><img src="images/watermelon.png" alt="Watermelon" style="width: 40px"><img src="images/watermelon.png" alt="Watermelon" style="width: 40px"> = 5 x panos</td>
-                </tr>
-                <tr>
-                    <td><img src="images/pear.png" alt="Pear" style="height: 50px"><img src="images/pear.png" alt="Pear" style="height: 50px"><img src="images/pear.png" alt="Pear" style="height: 50px"><img src="images/pear.png" alt="Pear" style="height: 50px"> = 4 x panos</td>
-                </tr>
-                <tr>
-                    <td><img src="images/cherry.png" alt="Cherry" style="width: 40px"><img src="images/cherry.png" alt="Cherry" style="width: 40px"><img src="images/cherry.png" alt="Cherry" style="width: 40px"><img src="images/cherry.png" alt="Cherry" style="width: 40px"> = 3 x panos</td>
-                </tr>
-                <tr>
-                    <td><img src="images/number.jpg" alt="Number seven" style="height: 40px"><img src="images/number.jpg" alt="Number seven" style="height: 40px"><img src="images/number.jpg" alt="Number seven" style="height: 40px"> = 5 x panos</td>
-                </tr>
-            </table>
-        </div>
-        <div class="game">
-            <div class="kuvat">
-                <img id="kuva1" class="kehys" src="images/apple.png">
-                <img id="kuva2" class="kehys" src="images/cherry.png">
-                <img id="kuva3" class="kehys" src="images/pear.png">
-                <img id="kuva4" class="kehys" src="images/watermelon.png">
+    
+        <div class="container">
+
+            <canvas id="header" width="900" height="120" style="align-content: center;"></canvas>
+            <div class="content">
+
+                <div class="otsikot">
+                    <h3>Rahaa: <span id="rahaa">50</span>€</h3>
+                    <h3>Valitse panos: </h3>
+                    <button id="yksi">1€ </button> <button id="kaksi"> 2€ </button> <button id="kolme"> 3€ </button> <button id="nelja"> 4€</button>
+                    <h3 style="padding: 30px 30px">Panos: <span id="tulostusAlue"></span></h3>
+                </div>
+                
+                <table>
+                    <tr>
+                        <td><img src="images/number.jpg" alt="Number seven" style="height: 40px"><img src="images/number.jpg" alt="Number seven" style="height: 40px"><img src="images/number.jpg" alt="Number seven" style="height: 40px"><img src="images/number.jpg" alt="Number seven" style="height: 40px"> = 10 x panos</td>
+                     </tr>
+                    <tr>
+                        <td><img src="images/apple.png" alt="Apple" style="width: 40px"><img src="images/apple.png" alt="Apple" style="width: 40px"><img src="images/apple.png" alt="Apple" style="width: 40px"><img src="images/apple.png" alt="Apple" style="width: 40px"> = 6 x panos</td>
+                    </tr>
+                    <tr>
+                        <td><img src="images/watermelon.png" alt="Watermelon" style="width: 40px"><img src="images/watermelon.png" alt="Watermelon" style="width: 40px"><img src="images/watermelon.png" alt="Watermelon" style="width: 40px"><img src="images/watermelon.png" alt="Watermelon" style="width: 40px"> = 5 x panos</td>
+                    </tr>
+                    <tr>
+                        <td><img src="images/pear.png" alt="Pear" style="height: 50px"><img src="images/pear.png" alt="Pear" style="height: 50px"><img src="images/pear.png" alt="Pear" style="height: 50px"><img src="images/pear.png" alt="Pear" style="height: 50px"> = 4 x panos</td>
+                    </tr>
+                    <tr>
+                        <td><img src="images/cherry.png" alt="Cherry" style="width: 40px"><img src="images/cherry.png" alt="Cherry" style="width: 40px"><img src="images/cherry.png" alt="Cherry" style="width: 40px"><img src="images/cherry.png" alt="Cherry" style="width: 40px"> = 3 x panos</td>
+                    </tr>
+                    <tr>
+                        <td><img src="images/number.jpg" alt="Number seven" style="height: 40px"><img src="images/number.jpg" alt="Number seven" style="height: 40px"><img src="images/number.jpg" alt="Number seven" style="height: 40px"> = 5 x panos</td>
+                    </tr>
+                </table>
+                
+            </div>    
+        
+            <div class="game">
+                <div class="kuvat">
+                    <img id="kuva1" class="kehys" src="images/apple.png">
+                    <img id="kuva2" class="kehys" src="images/cherry.png">
+                    <img id="kuva3" class="kehys" src="images/pear.png">
+                    <img id="kuva4" class="kehys" src="images/watermelon.png">
+                </div>
+                <div class="buttons">
+                    <button id="nappi1">Lukitse</button>
+                    <button id="nappi2">Lukitse</button>
+                    <button id="nappi3">Lukitse</button>
+                    <button id="nappi4">Lukitse</button>
+                </div>
+                <div class="tulos">
+                    <h4 id="voitto"></h4>
+                    <button id="pelaa">Pelaa</button>
+                </div>
+                
             </div>
-           <!--<button style="width:107px; margin-left:10px">Lukitse</button><button style="width:107px; margin-left:26px">Lukitse</button><button style="width:107px; margin-left:27px">Lukitse</button><button style="width:107px; margin-left:27px">Lukitse</button><button id="pelaa">Pelaa</button>--> 
+            
         </div>
-    </div>
+    
+    
     <script src="script.js"></script>
 </body>
 </html>

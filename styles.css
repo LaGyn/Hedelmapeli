@@ -7,26 +7,30 @@ body {
 }
 
 .container {
-    width: 900px;
-    height:auto;
     margin:auto;
+    width: 900px;
+    height:fit-content;
     background-color: rgb(25, 235, 35);
     border:2px solid black;
     border-radius: 15px;
-    align-content: center;
 }
 
 .content {
-    width: 870px;
-    height:auto;
-    margin:auto;
-    margin-bottom: 15px;
+    margin: auto;
+    width: 865px;
+    height:fit-content;
     background-color: bisque;
     border: 2px solid rgb(186, 99, 59);
     border-radius: 15px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size: 24px;
     color:rgb(29, 86, 15);
+    margin-bottom: 15px;
+    overflow: auto;
+}
+
+.otsikot {
+    float:left;
 }
 
 h3 {
@@ -46,6 +50,11 @@ button:hover {
     background-color: rgb(29, 86, 15);
 }
 
+table {
+    float:right;
+    margin: 15px
+}
+
 table, td {
     border: 2px solid rgb(29, 86, 15);
     border-radius: 12px;
@@ -54,9 +63,9 @@ table, td {
 }
 
 .game {
-    width: 870px;
-    height:auto;
     margin:auto;
+    width: 865px;
+    height: fit-content;
     margin-bottom: 15px;
     background-color: bisque;
     border: 2px solid rgb(186, 99, 59);
@@ -64,31 +73,47 @@ table, td {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size: 24px;
     color:rgb(29, 86, 15); 
+    overflow: auto;
 }
 
 .kuvat {
     margin:auto;
+    width:650px;
 }
 
 .kehys  {
-    float:left;
     border: 1px solid rgb(29, 86, 15);
     width: 120px;
     height: 120px;
     background-color: antiquewhite;
-    padding:5px;
-    margin:30px;
+    padding:8px;
+    margin:15px;
+}
+
+.buttons {
+    margin:auto;
+    width:650px;
+}
+
+#nappi1, #nappi2, #nappi3, #nappi4 {
+    width:120px;
+    margin:15px;
+    margin-top: 0;
 }
 
 #pelaa {
     background-color: rgb(185, 21, 174);
-    padding: 20px;
+    margin: 10px;
+    padding: 18px;
     font-size: 28px;
     border-radius: 5px;
-    position:relative;
     float:right;
 }
 
 #pelaa:hover {
     background-color: rgb(116, 17, 88);
+}
+
+#voitto {
+    text-align: center;
 }
