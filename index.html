@@ -17,7 +17,10 @@
                 <div class="otsikot">
                     <h3>Rahaa: <span id="rahaa">50</span> €</h3>
                     <h3>Valitse panos: </h3>
-                    <button id="yksi" onclick="asetaPanos(1)">1€ </button> <button id="kaksi" onclick="asetaPanos(2)"> 2€ </button> <button id="kolme" onclick="asetaPanos(3)"> 3€ </button> <button id="nelja" onclick="asetaPanos(4)"> 4€</button>
+                    <button id="yksi" onclick="asetaPanos(1)">1€ </button> 
+                    <button id="kaksi" onclick="asetaPanos(2)"> 2€ </button> 
+                    <button id="kolme" onclick="asetaPanos(3)"> 3€ </button> 
+                    <button id="nelja" onclick="asetaPanos(4)"> 4€</button>
                     <h3 style="padding: 30px 30px">Panos: <span id="tulostusAlue"></span> €</h3>
                 </div>
                 
@@ -52,16 +55,15 @@
                     <img id="kuva4" class="kehys" src="images/watermelon.png">
                 </div>
                 <div class="buttons">
-                    <button id="nappi1">Lukitse</button>
-                    <button id="nappi2">Lukitse</button>
-                    <button id="nappi3">Lukitse</button>
-                    <button id="nappi4">Lukitse</button>
+                    <button id="nappi1" onclick="lukitse1()">Lukitse</button>
+                    <button id="nappi2" onclick="lukitse2()">Lukitse</button>
+                    <button id="nappi3" onclick="lukitse3()">Lukitse</button>
+                    <button id="nappi4" onclick="lukitse4()">Lukitse</button>
                 </div>
                 <div class="tulos">
                     <h4 id="voitto"></h4>
-                    <button id="pelaa" onclick="pelaa()">Pelaa</button>
-                </div>
-                
+                    <button id="pelaa" onclick="pelaa(1)">Pelaa</button>
+                </div> 
             </div>
             
         </div>
