@@ -47,20 +47,21 @@ function pelaa(uusiKerroin){
 }
 
 function arpoo(){
-    let luku1 = Math.floor((Math.random() * 5) + 1);
+    if (lock==0){
+        let luku1 = Math.floor((Math.random() * 5) + 1);
     let luku2 = Math.floor((Math.random() * 5) + 1);
     let luku3 = Math.floor((Math.random() * 5) + 1);
     let luku4 = Math.floor((Math.random() * 5) + 1);
 
-    if (luku1 == 1 && vapaa == true){
+    if (luku1 == 1){
         img1.src="images/apple.png";
-    } else if (luku1 == 2 && vapaa == true){
+    } else if (luku1 == 2){
         img1.src="images/cherry.png";
-    } else if (luku1 == 3 && vapaa == true){
+    } else if (luku1 == 3){
         img1.src="images/number.jpg";
-    } else if (luku1 == 4 && vapaa == true){
+    } else if (luku1 == 4){
         img1.src="images/pear.png";
-    } else if (luku1 == 5 && vapaa == true){
+    } else if (luku1 == 5){
         img1.src="images/watermelon.png";
     }
       
@@ -99,6 +100,21 @@ function arpoo(){
     } else if (luku4 == 5){
         img4.src="images/watermelon.png";
     }
+    }
+    
+}
+
+const locks = [0,0,0,0]
+
+function lukitse(lock){
+    
+        if(locks[lock]==0){
+            locks[lock] = 1;
+        }
+        else {
+            locks[lock] = 0;
+        }
+   
 }
 
 function lukitse1(){
