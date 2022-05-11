@@ -9,7 +9,6 @@ ctx.fillText("Hedelmäpeli",canvas.width/2,canvas.height/2+20);
 let raha = 50;
 let voitto = 0;
 let panos = document.getElementById("tulostusAlue").innerHTML;
-let kerroin = 0;
 let kierros = 0;
 let vapaa = true;
 
@@ -32,14 +31,14 @@ function asetaPanos(uusiPanos){
     document.getElementById("tulostusAlue").innerHTML = panos;
 }
 
-function pelaa(uusiKerroin){
-    if (kerroin < 2){
-        kerroin = kerroin + uusiKerroin;
-        if (kerroin == 1){
+function pelaa(uusiKierros){
+    if (kierros < 2){
+        kierros = kierros + uusiKierros;
+        if (kierros == 1){
             raha = raha - panos;
             document.getElementById("rahaa").innerHTML = raha;
         }
-        if (kerroin == 2){
+        if (kierros == 2){
             document.getElementById("voitto").innerHTML = "Ei voittoa!";
         }
         arpoo();
@@ -47,8 +46,8 @@ function pelaa(uusiKerroin){
 }
 
 function arpoo(){
-    if (lock==0){
-        let luku1 = Math.floor((Math.random() * 5) + 1);
+    if (vapaa == true){
+    let luku1 = Math.floor((Math.random() * 5) + 1);
     let luku2 = Math.floor((Math.random() * 5) + 1);
     let luku3 = Math.floor((Math.random() * 5) + 1);
     let luku4 = Math.floor((Math.random() * 5) + 1);
@@ -100,16 +99,15 @@ function arpoo(){
     } else if (luku4 == 5){
         img4.src="images/watermelon.png";
     }
-    }
-    
+}
 }
 
-const locks = [0,0,0,0]
+const locks = [0,0,0,0];
 
 function lukitse(lock){
     
         if(locks[lock]==0){
-            locks[lock] = 1;
+            locks[lock] == 1;
         }
         else {
             locks[lock] = 0;
