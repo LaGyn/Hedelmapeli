@@ -10,21 +10,17 @@ let raha = 50;
 let voitto = 0;
 let panos = document.getElementById("tulostusAlue").innerHTML;
 let kierros = 0;
-let vapaa = true;
 
+const locks = [0,0,0,0];
+
+const slots = [0,1,2,3];
+
+// Kuvat:
+const images = ['apple.png','cherry.png','number.jpg','pear.png','watermelon.png'];
 let img1 = document.getElementById("kuva1");
 let img2 = document.getElementById("kuva2");
 let img3 = document.getElementById("kuva3");
 let img4 = document.getElementById("kuva4");
-
-/*let nappi1 = document.getElementById("nappi1");
-nappi1.addEventListener('click', lukitse);
-let nappi2 = document.getElementById("nappi2");
-nappi2.addEventListener('click', lukitse);
-let nappi3 = document.getElementById("nappi3");
-nappi3.addEventListener('click', lukitse);
-let nappi4 = document.getElementById("nappi4");
-nappi4.addEventListener('click', lukitse);*/
 
 function asetaPanos(uusiPanos){
     panos = uusiPanos
@@ -46,14 +42,28 @@ function pelaa(uusiKierros){
 }
 
 function arpoo(){
-    if (vapaa == true && lock == 0){
-    let luku1 = Math.floor((Math.random() * 5) + 1);
-    let luku2 = Math.floor((Math.random() * 5) + 1);
-    let luku3 = Math.floor((Math.random() * 5) + 1);
-    let luku4 = Math.floor((Math.random() * 5) + 1);
-
+    if (locks[0] == 0){
+        let luku1 = Math.floor((Math.random() * [images.length]) + 1);
+        img1.src =`images/${[images[luku1]]}`;
+    }
+    if (locks[1] == 0){
+        let luku2 = Math.floor((Math.random() * [images.length]) + 1);
+        img2.src = `images/${[images[luku2]]}`;
+    }
+    if (locks[2] == 0){
+        let luku3 = Math.floor((Math.random() * [images.length]) + 1);
+        img3.src = `images/${[images[luku3]]}`;
+    }
+    if (locks[3] == 0){
+        let luku4 = Math.floor((Math.random() * [images.length]) + 1);
+        img4.src = `images/${[images[luku4]]}`;
+    }
+    
+    
+    
+/*
     if (luku1 == 1){
-        img1.src="images/apple.png";
+        
     } else if (luku1 == 2){
         img1.src="images/cherry.png";
     } else if (luku1 == 3){
@@ -98,19 +108,16 @@ function arpoo(){
         img4.src="images/pear.png";
     } else if (luku4 == 5){
         img4.src="images/watermelon.png";
-    }
-}
+    }*/
 }
 
-const locks = [0,0,0,0];
-
-function lukitse(lock){
+function lukitse(slot){
     
-    if(locks[lock]==0){
-        locks[lock] == 1;
+    if(locks[slot]==0){
+        locks[slot] == 1;
     }
     else {
-        locks[lock] = 0;
+        locks[slot] = 0;
     }
 }
 
