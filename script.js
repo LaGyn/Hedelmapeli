@@ -46,7 +46,7 @@ function pelaa(uusiKierros){
 }
 
 function arpoo(){
-    if (vapaa == true){
+    if (vapaa == true && lock == 0){
     let luku1 = Math.floor((Math.random() * 5) + 1);
     let luku2 = Math.floor((Math.random() * 5) + 1);
     let luku3 = Math.floor((Math.random() * 5) + 1);
@@ -106,16 +106,15 @@ const locks = [0,0,0,0];
 
 function lukitse(lock){
     
-        if(locks[lock]==0){
-            locks[lock] == 1;
-        }
-        else {
-            locks[lock] = 0;
-        }
-   
+    if(locks[lock]==0){
+        locks[lock] == 1;
+    }
+    else {
+        locks[lock] = 0;
+    }
 }
 
-function lukitse1(){
+/*function lukitse1(){
     vapaa == false;
     img1.style.border="3px solid red";
 }
@@ -130,4 +129,4 @@ function lukitse3(){
 function lukitse4(){
     vapaa == false;
     img4.style.border="3px solid red";
-}
+}*/
