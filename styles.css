@@ -117,3 +117,7 @@ table, td {
 #voitto {
     text-align: center;
 }
+
+.locked {
+    border:3px solid red;
+}

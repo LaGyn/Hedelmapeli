@@ -1,0 +1,7 @@
+-Asetetaan panos.
+-Pelataan eka kierros, peli arpoo kuvat, panos vähennetään rahasummasta.
+-Kuvien arpomisen jälkeen lukitaan valitut kuvat, lukitus voidaan myös poistaa uudelleen klikkaamalla.
+-Käynnistetään arpominen uudestaan (pelaa).
+-Toisen arpomiskierroksen jälkeen ohjelma  laskee tuliko voittoa.
+-Tulostetaan voitto/häviö.
+-Lopuksi funktio joka lataa ohjelman uudestaan.
