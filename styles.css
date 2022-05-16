@@ -78,7 +78,7 @@ table, td {
 
 .kuvat {
     margin:auto;
-    width:650px;
+    width:fit-content;
 }
 
 .kehys  {
@@ -92,7 +92,7 @@ table, td {
 
 .buttons {
     margin:auto;
-    width:650px;
+    width:fit-content;
 }
 
 #nappi1, #nappi2, #nappi3, #nappi4 {
@@ -101,17 +101,29 @@ table, td {
     margin-top: 0;
 }
 
+.peluuNappi {
+    margin: auto;
+    width:fit-content;
+}
+
 #pelaa {
     background-color: rgb(185, 21, 174);
-    margin: 10px;
+    margin: auto;
+    width: 120px;
     padding: 18px;
     font-size: 28px;
     border-radius: 5px;
-    float:right;
+    margin-top: 10px;
 }
 
 #pelaa:hover {
     background-color: rgb(116, 17, 88);
+}
+
+.tulos {
+    margin:auto;
+    width:650px;
+    align-items: center;
 }
 
 #voitto {

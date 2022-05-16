@@ -21,7 +21,7 @@
                     <button id="kaksi" onclick="asetaPanos(2)"> 2€ </button> 
                     <button id="kolme" onclick="asetaPanos(3)"> 3€ </button> 
                     <button id="nelja" onclick="asetaPanos(4)"> 4€</button>
-                    <h3 style="padding: 30px 30px">Panos: <span id="tulostusAlue"></span> €</h3>
+                    <h3 style="padding: 30px 30px">Panos: <span id="panos"></span> €</h3>
                 </div>
                 
                 <table>
@@ -60,9 +60,11 @@
                     <button id="nappi3" onclick="lukitse(2)">Lukitse</button>
                     <button id="nappi4" onclick="lukitse(3)">Lukitse</button>
                 </div>
+                <div class="peluuNappi">
+                    <button id="pelaa" onclick="pelaa(1)">Pelaa</button></br>
+                </div>
                 <div class="tulos">
                     <h4 id="voitto"></h4>
-                    <button id="pelaa" onclick="pelaa(1)">Pelaa</button>
                 </div> 
             </div>
             
