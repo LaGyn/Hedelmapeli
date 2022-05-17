@@ -2,6 +2,17 @@
 -Pelataan eka kierros, peli arpoo kuvat, panos vähennetään rahasummasta.
 -Kuvien arpomisen jälkeen lukitaan valitut kuvat, lukitus voidaan myös poistaa uudelleen klikkaamalla.
 -Käynnistetään arpominen uudestaan (pelaa).
--Toisen arpomiskierroksen jälkeen ohjelma  laskee tuliko voittoa.
--Tulostetaan voitto/häviö.
--Lopuksi funktio joka lataa ohjelman uudestaan.
+-Arpomiskierroksen jälkeen ohjelma  laskee tuliko voittoa ja tulostaa joko voiton määrän tai "Ei voittoa!".
+-Arpomiskierroksia on yhteensä kaksi.
+-Voittorahat lisätään rahamäärään.
+-Kun peli on kahden kierroksen jälkeen ohi, panos häviää.
+-Panoksen asettamisen jälkeen lukittujen kuvien lukitus poistuu.
+
+Pelissä seuraavat visuaaliset elementit:
+-Taulukko, joka kertoo voittojen määrästä
+-Rahamäärää
+-Valittavat panokset nappeina
+-Panoksen koko
+-Slotit, joihin kuvat arvotaan (4kpl) ja niihin lukitse-napit
+-Pelaa-nappeina
+-Tulostusalue, johon tulostetaan voitto/tappio

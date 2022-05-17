@@ -3,8 +3,8 @@ let ctx = canvas.getContext("2d");
 ctx.font = "50px Arial";
 ctx.fillStyle = "rgb(238, 238, 114)";
 ctx.textAlign = "center";
-//ctx.strokeText("Hedelmäpeli", canvas.width/2, canvas.height/2+20);
 ctx.fillText("Hedelmäpeli",canvas.width/2,canvas.height/2+20);
+ctx.strokeText("Hedelmäpeli", canvas.width/2, canvas.height/2+20);
 
 let raha = 50;
 let voitto = 0;
@@ -15,7 +15,6 @@ let uusiVoitto = 0;
 const locks = [0,0,0,0];
 const slots = [0,1,2,3];
 const kuvat = document.querySelectorAll(".kehys");
-// Kuvat:
 const images = ['apple.png','cherry.png','number.jpg','pear.png','watermelon.png'];
 
 let img1 = document.getElementById("kuva1");
@@ -24,25 +23,33 @@ let img3 = document.getElementById("kuva3");
 let img4 = document.getElementById("kuva4");
 
 function asetaPanos(uusiPanos){
-    panos = uusiPanos
-    document.getElementById("panos").innerHTML = panos;
-    freeLocks();
-    palautaKuvat();
-    kierros = 0;
+    if (raha > uusiPanos){
+        panos = uusiPanos
+        document.getElementById("panos").innerHTML = panos;
+        freeLocks();
+        palautaKuvat();
+        kierros = 0;
+    }
+    else {
+        alert("Sinulla ei ole tarpeeksi rahaa!");
+    }
+    
 }
 
 function pelaa(uusiKierros){
-    
-    kierros = kierros + uusiKierros;
-    if (kierros == 1){
-        raha = raha - panos;
-        document.getElementById("rahaa").innerHTML = raha;
-    }
-   
+    if (kierros < 2){
+        kierros = kierros + uusiKierros;
+        if (kierros == 1){
+            raha = raha - panos;
+            document.getElementById("rahaa").innerHTML = raha;
+        }
+        if (kierros == 2){
+            document.getElementById("panos").innerHTML = "";
+        }
     arpoo();
     tarkistaVoitto();
     kolmeKertaa();
-    
+    }
 }
 
 function arpoo(){
@@ -83,7 +90,6 @@ function tarkistaVoitto(){
     if (slots[0] == 0 && slots[1] == 0 && slots[2] == 0 && slots[3] == 0){
         voitto = 6 * panos;
         tulostaVoitto();
-        //slots.toString() == "0,0,0,0"
     } 
     else if (slots[0] == 1 && slots[1] == 1 && slots[2] == 1 && slots[3] == 1){
         voitto = 3 * panos;
@@ -124,7 +130,6 @@ function kolmeKertaa(){
         voitto = 5 * panos;
         tulostaVoitto();
     }
-//tutki kuinka monta kertaa slotissa esiintyy merkkijono jossa seiskoja eli 2
 }
 
 function tulostaVoitto(){
@@ -154,15 +159,6 @@ function freeLocks(){
         locks[3] = 0;
         kuvat[3].classList.remove("locked");
     }
-   /* for (let lock in locks){
-        lock=0;
-    }
-    
-    const kuvat = document.querySelectorAll(".kehys")
-    kuvat.forEach(function(kuva){
-        console.log(kuva)
-        kuva.classList.remove('locked')
-    })*/
 }
 
 function palautaKuvat(){
