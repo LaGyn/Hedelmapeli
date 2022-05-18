@@ -23,7 +23,7 @@ let img3 = document.getElementById("kuva3");
 let img4 = document.getElementById("kuva4");
 
 function asetaPanos(uusiPanos){
-    if (raha > uusiPanos){
+    if (raha >= uusiPanos){
         panos = uusiPanos
         document.getElementById("panos").innerHTML = panos;
         freeLocks();
