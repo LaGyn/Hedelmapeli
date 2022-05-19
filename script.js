@@ -13,9 +13,9 @@ let kierros = 0;
 let uusiVoitto = 0;
 
 const locks = [0,0,0,0];
-const slots = [0,1,2,3];
+let slots = [0,1,2,3];
 const kuvat = document.querySelectorAll(".kehys");
-const images = ['apple.png','cherry.png','number.jpg','pear.png','watermelon.png'];
+const images = ['apple.png','cherry.png','pear.png','watermelon.png','number.jpg'];
 
 let img1 = document.getElementById("kuva1");
 let img2 = document.getElementById("kuva2");
@@ -29,6 +29,7 @@ function asetaPanos(uusiPanos){
         freeLocks();
         palautaKuvat();
         kierros = 0;
+        document.getElementById("voitto").innerHTML = "";
     }
     else {
         alert("Sinulla ei ole tarpeeksi rahaa!");
@@ -96,34 +97,35 @@ function tarkistaVoitto(){
         tulostaVoitto();
     }
     else if (slots[0] == 2 && slots[1] == 2 && slots[2] == 2 && slots[3] == 2){
-        voitto = 10 * panos;
-        tulostaVoitto();
-    }
-    else if (slots[0] == 3 && slots[1] == 3 && slots[2] == 3 && slots[3] == 3){
         voitto = 4 * panos;
         tulostaVoitto();
     }
-    else if (slots[0] == 4 && slots[1] == 4 && slots[2] == 4 && slots[3] == 4){
+    else if (slots[0] == 3 && slots[1] == 3 && slots[2] == 3 && slots[3] == 3){
         voitto = 5 * panos;
+        tulostaVoitto();
+    }
+    else if (slots[0] == 4 && slots[1] == 4 && slots[2] == 4 && slots[3] == 4){
+        voitto = 10 * panos;
         tulostaVoitto();
     }
     else {
         document.getElementById("voitto").innerHTML = "Ei voittoa!";
     }
+    updateUI();
 }
 
 function kolmeKertaa(){
     let seiska = 0;
-    if (slots[0] == 2){
+    if (slots[0] == 4){
         seiska ++;
     }
-    if (slots[1] == 2){
+    if (slots[1] == 4){
         seiska ++;
     }
-    if (slots[2] == 2){
+    if (slots[2] == 4){
         seiska ++;
     }
-    if (slots[3] == 2){
+    if (slots[3] == 4){
         seiska ++;
     }
     if (seiska == 3){
@@ -140,7 +142,7 @@ function tulostaVoitto(){
 }
 
 
-document.getElementByClassList.add("locked");
+//document.getElementByClassList.add("locked");
 
 function freeLocks(){
     if (locks[0] == 1){
@@ -162,8 +164,13 @@ function freeLocks(){
 }
 
 function palautaKuvat(){
-    img1.src = "images/apple.png";
-    img2.src = "images/cherry.png";
-    img3.src = "images/pear.png";
-    img4.src = "images/watermelon.png";
+    slots = [0,1,2,3];
+    updateUI();
+}
+
+function updateUI() {
+    const kuvat = document.querySelectorAll(".kehys");
+    for (let i = 0; i < slots.length; i++){
+        kuvat[i].src = "images/" + images[slots[i]];
+    }
 }
