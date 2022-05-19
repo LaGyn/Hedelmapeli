@@ -34,7 +34,6 @@ function asetaPanos(uusiPanos){
     else {
         alert("Sinulla ei ole tarpeeksi rahaa!");
     }
-    
 }
 
 function pelaa(uusiKierros){
